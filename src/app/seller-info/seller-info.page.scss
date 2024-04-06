@@ -1,0 +1,13 @@
+.seller-image {
+  width: 100%;
+  height: 30%;
+  object-fit: contain;
+}
+
+.back-button {
+  z-index: 100;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  position: absolute;
+}

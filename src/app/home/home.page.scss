@@ -1,0 +1,81 @@
+ion-header {
+  ion-toolbar:first-child {
+    ion-button:first-child {
+      ion-img {
+        max-height: 32px;
+      }
+    }
+
+    ion-buttons:last-child {
+      ion-button {
+        ion-icon {
+          margin-left: 0;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  ion-toolbar:last-child {
+    ion-searchbar {
+      margin-left: 16px;
+      margin-right: 0;
+      flex-grow: 1;
+      --background: var(--ion-color-light);
+      --color: var(--ion-color-medium);
+      --placeholder-color: var(--ion-color-medium);
+    }
+
+    ion-buttons:last-child {
+      ion-button {
+        ion-icon {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+ion-row {
+  ion-segment {
+    margin: 0px;
+
+    ion-segment-button {
+      ion-label {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      --color-checked: var(--ion-color-primary);
+      --background-checked: var(--ion-color-light);
+      --border-color-checked: var(--ion-color-light);
+    }
+  }
+}
+
+ion-row {
+  .imgCard {
+    ion-card {
+      margin: 0%;
+
+      ion-card-header {
+        padding: 0%;
+
+        ion-card-subtitle {
+          margin: 0%;
+        }
+      }
+    }
+  }
+}
+
+ion-card-content {
+  margin: 0px;
+  padding: 0px;
+}
+
+ion-segment-button {
+  min-width: 130px !important;
+  max-width: 130px !important;
+}

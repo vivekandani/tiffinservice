@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-img src="" alt="logo"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-label>Current Location</ion-label>
+        <ion-icon name="chevron-down"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-row>
+  <ion-row>
+    <ion-segment scrollable mode="md">
+      <ion-segment-button value="electronics">
+        <ion-img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsagsFwpijalJHH5hqKPdTfLDRXBHoiSRq6g&usqp=CAU"
+        ></ion-img>
+        <ion-label>Vegetarian</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="fashion">
+        <ion-img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2FGr-qQVdAh_xcbxRonKIoocO-OoZMgIcpQ&usqp=CAU"
+        ></ion-img>
+        <ion-label>non veg</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="home">
+        <ion-img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYir5-I4imuFm4xuASJ2OG4dKblgnA9Rnzg&usqp=CAU"
+        ></ion-img>
+        <ion-label>Vegan</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="vehicles">
+        <ion-img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf9p7bw0lsC8Jrk9jI6oeLJmec6YA1voJp7w&usqp=CAU"
+        ></ion-img>
+        <ion-label>jain food</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="services">
+        <ion-img src="assets/item-1.jpg"></ion-img>
+        <ion-label>Services</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="jobs">
+        <ion-img src="assets/item-1.jpg"></ion-img>
+        <ion-label>Jobs</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="properties">
+        <ion-img src="assets/item-1.jpg"></ion-img>
+        <ion-label>Properties</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+
+  <ion-row class="imgCardRow">
+    <ion-col
+      *ngFor="let item of items;let i = index"
+      class="imgCard"
+      size="6"
+      size-md="4"
+      size-lg="2"
+    >
+      <ion-card
+        (click)="selectSeller(item,i)"
+        [routerLink]="['/seller-info',item]"
+        routerLinkActive="router-link-active"
+      >
+        <ion-img [src]="item.image"></ion-img>
+        <ion-card-header>
+          <ion-card-title class="ion-text-center"
+            ><span>&#8377;</span> {{ item.price }}</ion-card-title
+          >
+          <ion-card-subtitle class="ion-text-center"
+            >{{ item.subtitle }}</ion-card-subtitle
+          >
+        </ion-card-header>
+
+        <ion-card-content class="ion-text-center">
+          {{ item.description }}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons style="width: 100%" class="ion-justify-content-between">
+      <ion-button tab="Home" href="/home">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+      <ion-button tab="tab1" href="/tabs/tab1">
+        <ion-icon name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button tab="tab2" href="/tabs/tab2">
+        <ion-icon name="chatbox"></ion-icon>
+      </ion-button>
+      <ion-button tab="tab3" href="/tabs/tab3">
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-button>
+      <ion-button tab="tab4" href="/tabs/tab4">
+        <ion-icon name="receipt"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

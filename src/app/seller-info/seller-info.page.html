@@ -1,0 +1,29 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>seller-info</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">seller-info</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <!-- <ion-item> -->
+  <!-- <ion-button class="float-left"> -->
+  <ion-icon
+    class="back-button"
+    (click)="navigateBack()"
+    name="arrow-back-outline"
+  ></ion-icon>
+  <!-- </ion-button> -->
+  <ion-img [src]="sellerImage" class="seller-image position-relative">
+  </ion-img>
+  <!-- </ion-item> -->
+  <ion-text>
+    <h3 style="margin: auto 10px">{{price}} Rs. Only</h3>
+    <h4 style="margin: auto 10px">{{subtitle}}</h4>
+    <h5 style="margin: auto 10px">Location</h5>
+  </ion-text>
+</ion-content>
